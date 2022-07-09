@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+@media screen and (max-width: 720px) {
+  body {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 520px) {
+  body {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 420px) {
+  body {
+    font-size: 13px;
+  }
+}
