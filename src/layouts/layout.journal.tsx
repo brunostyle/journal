@@ -1,13 +1,11 @@
 import { Outlet } from 'react-router-dom';
 import { MenuJournal } from '../components';
-import { ContainerJournal } from '../styles';
-import { Background } from '../styles';
 
 export const JournalLayout = () => (
-	<ContainerJournal>
+	<div className="container__journal">
 		<MenuJournal />
-		<Background>
+		<div className="background">
 			<Outlet />
-		</Background>
-	</ContainerJournal>
+		</div>
+	</div>
 );

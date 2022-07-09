@@ -1,5 +1,4 @@
 import moment from 'moment';
-import { Description } from '../styles';
 import { useNote } from '../zustand';
 import type { Note } from '../interface';
 import { Card, Row, Spacer, Text } from '@nextui-org/react';
@@ -17,7 +16,7 @@ export const Item = ({ id, title, body, date, url }: Note) => {
 					<Text>{title}</Text>
 				</Card.Header>
 				<Card.Body css={{py: 0}}>
-					<Description>{body}</Description>
+					<p className="description">{body}</p>
 				</Card.Body>
 				<Card.Footer>
 					<Row justify='flex-end'>

@@ -1,7 +1,6 @@
 import { BiLogOut, BiCalendarPlus } from 'react-icons/bi';
 import { MdTitle, MdSubtitles } from 'react-icons/md';
 import { List } from './index';
-import { Menu } from '../styles';
 import { useAuth, useNote } from '../zustand';
 import { Button, Modal, Row, Spacer, Text, User } from '@nextui-org/react';
 import { Input } from './index';
@@ -37,13 +36,13 @@ export const MenuJournal = () => {
 	};
 
 	return (
-		<Menu active={!!active}>
+		<div className={!!active ? 'menu view' : 'menu'}>
 			<Row justify="space-between" align="center" css={{ mb: '1em' }}>
 				<User zoomed src={logo} name={user?.name} />
 				<Button auto flat size="sm" onClick={handleLogout}><BiLogOut /></Button>
 			</Row>
 
-			<Row>
+			<Row css={{pb: '1em'}}>
 				<Button flat css={{w: '100%'}} icon={<BiCalendarPlus />} onClick={() => setVisible(true)}>New Entry</Button>
 			</Row>
 
@@ -69,6 +68,6 @@ export const MenuJournal = () => {
 			</Modal>
 
 			<List />
-		</Menu>
+		</div>
 	);
 };
